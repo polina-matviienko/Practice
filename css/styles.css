@@ -1,18 +1,47 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #434455;
-  background-color: #ffffff;
+:root {
+  --black: #111;
+  --orange: #fd9222;
+  --violet: #1e1823;
+  --beige: #fcf1e0;
+  --light: #fafafa;
+  --gray: #4c4c4c;
+  --white: #fff;
+  --marker-body: #4c4c4c;
+  --marker-border: #eceded;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  background-color: var(--light);
+}
+
+button {
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  font-style: normal;
+  color: currentColor;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 h1,
@@ -25,144 +54,17 @@ p {
   margin: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-button {
-  cursor: pointer;
-  box-shadow: none;
-  border: none;
-}
-
-.logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-}
-
-/*CONTAINERS AND SECTIONS*/
-
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.section {
-  padding: 120px 0;
-}
-
-/*HEADER*/
-
-.header {
-  border-bottom: 1px solid #e7e9fc;
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.header .logo {
-  margin-right: 76px;
-}
-
-.header .logo-accent {
-  color: #2e2f42;
-}
-
-.header-menu-list {
-  display: flex;
-  gap: 40px;
-}
-
-.header-menu-link {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  padding: 24px 0;
-  display: inline-block;
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
-  color: #404bbf;
-}
-
-.header-address {
-  font-style: normal;
-}
-
-.header-address-list {
-  display: flex;
-  gap: 40px;
-}
-
-.header-address-link {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.header-address-link:hover,
-.header-address-link:focus {
-  color: #404bbf;
-}
-
-/*HERO*/
-
-.hero {
-  background-color: #2e2f42;
-  padding: 188px 0;
-}
-
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-title {
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 48px;
-  max-width: 496px;
-}
-
-.hero-button {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
-  border-radius: 4px;
-  padding: 16px 32px;
-  min-width: 169px;
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404bbf;
-}
-
-/*FEATURES*/
+/* COMMON STYLES */
 
 .visually-hidden {
   position: absolute;
@@ -172,143 +74,273 @@ button {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   overflow: hidden;
 }
 
-.features-list {
-  display: flex;
-  gap: 24px;
+.section-title {
+  color: var(--black);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
 }
 
-.features-list-item {
-  width: calc((100% - 3 * 24px) / 4);
+.accent-text {
+  color: var(--orange);
 }
 
-.features-list-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: transparent;
 }
 
-.features-list-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+.btn-accent {
+  background-color: var(--orange);
 }
 
-/*TEAM*/
-
-.team {
-  background-color: #f4f4fd;
+.btn-light {
 }
 
-.team-title {
-  font-size: 36px;
+.btn-dark {
+  font-size: 18px;
+  color: var(--black);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-  text-transform: capitalize;
-  margin-bottom: 72px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
-.team-list {
-  display: flex;
-  gap: 24px;
+/* MENU */
+
+.menu {
 }
 
-.team-list-item {
-  background-color: #ffffff;
-  width: calc((100% - 3 * 24px) / 4);
-  border-radius: 0px 0px 4px 4px;
+.menu-item {
 }
 
-.team-list-img {
-  max-width: 100%;
-  object-fit: cover;
-}
-
-.team-list-wrap {
-  padding: 32px 0;
-}
-
-.team-list-title {
+.menu-link {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  text-align: center;
-  margin-bottom: 8px;
+  line-height: 1.14;
 }
 
-.team-list-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--orange);
 }
 
-/*PORTFOLIO*/
+/* SOCIALS */
 
-.product-title {
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-  text-transform: capitalize;
-  margin-bottom: 72px;
+.socials {
 }
 
-.product-list {
-  display: flex;
-  gap: 48px 24px;
-  flex-wrap: wrap;
+.socials-item {
 }
 
-.product-list-wrap {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+.socials-link {
 }
 
-.product-list-title {
+.socials-icon {
+}
+
+/* HEADER */
+
+.header {
+}
+
+/* HERO SECTION */
+
+.hero {
+  background: rgba(17, 17, 17, 0.4);
+}
+
+.hero-title {
+  font-size: 28px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: var(--white);
 }
 
-.product-list-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+/* BENEFITS SECTION */
+
+.benefits {
+  background: var(--violet);
 }
 
-/*FOOTER*/
+.benefits-list {
+}
+
+.benefits-item {
+}
+
+.benefits-caption {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.benefits-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* INGREDIENTS SECTION */
+
+.ingredients {
+}
+
+.ingredients-list {
+}
+
+.ingredients-item {
+}
+
+.ingredients-ill {
+}
+
+.ingredients-subtitle {
+  font-weight: 600;
+}
+
+/* MADE SECTION */
+
+.made {
+}
+
+.made-ill {
+}
+
+.made-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.made-list {
+}
+
+.made-item {
+}
+
+/* RRODUCTS SECTION */
+
+.products {
+}
+
+.products-list {
+}
+
+.products-item {
+}
+
+.products-pic {
+}
+
+.products-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33333;
+  text-transform: uppercase;
+}
+
+.products-type {
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.products-label {
+  font-weight: 600;
+}
+
+/* BESTSELLERS SECTION */
+
+.bestsellers {
+}
+
+.bestsellers-list {
+}
+
+.bestsellers-item {
+}
+
+.bestsellers-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+
+/* REVIEWS SECTION */
+
+.reviews {
+}
+
+.reviews-list {
+}
+
+.reviews-item {
+}
+
+.reviews-author {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.reviews-text {
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+/* FOOTER */
 
 .footer {
-  background-color: #2e2f42;
-  padding: 100px 0;
+  background: var(--violet);
 }
 
-.footer .logo {
-  display: inline-block;
-  margin-bottom: 16px;
+.footer-slogan {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  color: var(--white);
 }
 
-.footer .logo-accent {
-  color: #f4f4fd;
+.footer-caption {
+  font-weight: 500;
+  color: var(--white);
 }
 
-.footer-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  max-width: 264px;
+.contacts {
+}
+
+.contacts-list {
+}
+
+.contacts-item {
+}
+
+.contacts-link {
+  color: var(--white);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--orange);
+}
+
+.footer-menu {
+  color: var(--white);
 }
